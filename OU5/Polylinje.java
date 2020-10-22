@@ -1,19 +1,17 @@
 package OU5;
 
-public class Polylinje
-{
+public class Polylinje {
+	
 	//Instansierade variabler
 	private Punkt[] horn;
 	private String farg = "svart";
 	private int bredd = 1;
 	
-	public Polylinje ()	//Skapar polylinjen
-	{
+	public Polylinje () {	//Skapar polylinjen
 		this.horn = new Punkt[0];
 	}
 	
-	public Polylinje (Punkt[] horn)
-	{
+	public Polylinje (Punkt[] horn) {
 		this.horn = new Punkt[horn.length];
 		for (int i = 0; i < horn.length; i++)
 		this.horn[i] = new Punkt (horn[i]);
@@ -39,10 +37,9 @@ public class Polylinje
 	public void setBredd (int bredd) {	this.bredd = bredd;	}
 	
 	//Metod för att räkna ut längden på polylinjen
-	public double langd ()
-	{
+	public double langd () {
 		double totLang = 0;
-		for (int i =1; i < horn.length; i++){
+		for (int i =1; i < horn.length; i++) {
 			double xDist = Math.abs( horn[i-1].getX() - horn[i].getX());
 			double yDist = Math.abs( horn[i-1].getY() - horn[i].getY());
 			totLang += Math.sqrt( xDist*xDist + yDist*yDist);
