@@ -2,8 +2,8 @@ package OU5;
 
 import java.util.Random;
 
-class ValjPolylinje
-{
+class ValjPolylinje {
+	
 	public static final Random rand = new Random ();
 	public static final int ANTAL_POLYLINJER = 10;
 	
